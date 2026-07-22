@@ -1,0 +1,83 @@
+/* Universal Selector */
+*{
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    background-color: #f4f4f9;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header{
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+}
+
+
+/* Paragraph */
+p{
+    line-height: 1.6;
+}
+
+/* Navigation Links */
+nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* Hover Effect */
+nav ul li a:hover{
+    color: #2563eb;
+}
+
+/* Header */
+header{
+    padding: 20px;
+}
+
+/* Navigation */
+nav{
+    padding: 15px;
+}
+
+/* Section */
+section{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+#about{
+    background-color: white;
+    border-left: 6px solid orange;
+    padding: 20px;
+}
+
+/* Main */
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Table */
+.data-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table Heading */
+.data-table th{
+    background-color: #e2e8f0;
+    padding: 12px;
+}
+
+/* Table Data */
+.data-table td{
+    padding: 12px;
+    border-bottom: 1px solid #cccccc;
+}
