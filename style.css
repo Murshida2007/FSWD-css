@@ -1,83 +1,214 @@
-/* Universal Selector */
+/* ==========================
+   Universal Selector
+========================== */
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Body */
+/* ==========================
+   Body
+========================== */
 body{
     background-color: #f4f4f9;
     color: #333333;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
-/* Header */
+/* ==========================
+   Header
+========================== */
 header{
     background-color: #1e293b;
     color: white;
     text-align: center;
+    padding: 20px;
 }
 
-
-/* Paragraph */
+/* ==========================
+   Paragraph
+========================== */
 p{
     line-height: 1.6;
 }
 
-/* Navigation Links */
-nav ul li a{
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
+/* ==========================
+   Navigation
+========================== */
+nav{
+    background-color: #ffffff;
+    padding: 15px;
 }
 
-/* Hover Effect */
+/* Flexbox Navigation */
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
 nav ul li a:hover{
     color: #2563eb;
 }
 
-/* Header */
-header{
-    padding: 20px;
+/* ==========================
+   Main Container
+========================== */
+main{
+    max-width: 800px;
+    margin: 20px auto;
 }
 
-/* Navigation */
-nav{
-    padding: 15px;
-}
-
-/* Section */
+/* ==========================
+   Sections
+========================== */
 section{
+    background-color: white;
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 /* About Section */
 #about{
-    background-color: white;
     border-left: 6px solid orange;
-    padding: 20px;
 }
 
-/* Main */
-main{
-    max-width: 800px;
-    margin: 0 auto;
+/* ==========================
+   Table
+========================== */
+.table-container{
+    overflow-x: auto;
 }
 
-/* Table */
 .data-table{
     width: 100%;
     border-collapse: collapse;
+    margin-top: 15px;
 }
 
-/* Table Heading */
-.data-table th{
-    background-color: #e2e8f0;
-    padding: 12px;
-}
-
-/* Table Data */
+.data-table th,
 .data-table td{
+    border: 1px solid #cccccc;
     padding: 12px;
-    border-bottom: 1px solid #cccccc;
+    text-align: left;
+}
+
+.data-table th{
+    background-color: #1e293b;
+    color: white;
+}
+
+.data-table tr:nth-child(even){
+    background-color: #f8fafc;
+}
+
+/* ==========================
+   Form
+========================== */
+.form-container{
+    background-color: white;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input,
+select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus{
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ==========================
+   Button
+========================== */
+#submit-btn{
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#submit-btn:hover{
+    background-color: #1d4ed8;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer{
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ==========================
+   Responsive Web Design
+========================== */
+@media (max-width: 768px){
+
+    /* Navigation */
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Main Container */
+    main{
+        width: 95%;
+    }
+
+    /* Form Container */
+    .form-container{
+        width: 100%;
+    }
+
+    /* Responsive Table */
+    .table-container{
+        overflow-x: auto;
+    }
+
+    .data-table{
+        min-width: 600px;
+    }
+
+    /* Button */
+    #submit-btn{
+        width: 100%;
+    }
 }
